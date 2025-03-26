@@ -40,6 +40,7 @@
             text-decoration: none;
             color: inherit;
             transition: all 0.2s ease;
+            position: relative;
         }
 
         .project:hover {
@@ -55,6 +56,26 @@
         .project p {
             margin: 1rem 0 0 0;
             color: #666;
+        }
+
+        .status {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .status-paused {
+            background-color: #FEF3C7;
+            color: #92400E;
+        }
+
+        .status-ongoing {
+            background-color: #DCFCE7;
+            color: #166534;
         }
 
         .floating-link {
@@ -80,16 +101,18 @@
 </head>
 <body>
     <h1>Welcome to my lab</h1>
-    <div class="subtitle">Here are my ongoing experiments</div>
+    <div class="subtitle">Here are my experiments...</div>
 
     <div class="projects">
-        <a href="https://dowe.bubbleapps.io/version-test" class="project" target="_blank">
-            <h2>Dowe</h2>
-            <p>A platform connecting people with accountability partners to help them achieve their goals and make their dreams come true.</p>
-        </a>
         <a href="https://emotion-labeling.pages.dev/" class="project" target="_blank">
+            <div class="status status-ongoing">Ongoing</div>
             <h2>Emotion Identifier</h2>
             <p>An interactive tool to help identify and understand emotions through a hierarchical approach.</p>
+        </a>
+        <a href="https://dowe.bubbleapps.io/version-test" class="project" target="_blank">
+            <div class="status status-paused">Paused</div>
+            <h2>Dowe</h2>
+            <p>A platform connecting people with accountability partners to help them achieve their goals and make their dreams come true.</p>
         </a>
     </div>
 
